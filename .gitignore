@@ -3,3 +3,5 @@ __pycache__/
 *.db
 data/processed/*.db
 .ipynb_checkpoints/
+data/processed/*.duckdb
+
