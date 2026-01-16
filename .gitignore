@@ -1,5 +1,5 @@
 __pycache__/
 .venv/
 *.db
-processed/
+data/processed/*.db
 .ipynb_checkpoints/
