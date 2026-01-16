@@ -9,7 +9,8 @@ def run_file(con, filename):
     path = SQL_DIR / filename
     query = path.read_text(encoding="utf-8")
     print(f"\n--- {filename} ---")
-    print(con.execute(query).df().head(20))
+    df = con.execute(query).df()
+    print(df.head(20).to_string(index=False))
 
 def main():
     if not DB_PATH.exists():
