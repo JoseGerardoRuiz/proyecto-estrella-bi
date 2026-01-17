@@ -65,13 +65,13 @@ c4.metric("AOV", f"${(detalle['revenue'].sum()/detalle.shape[0]):,.0f}")
 st.divider()
 
 st.subheader("📈 KPIs por mes")
-st.dataframe(kpis, use_container_width=True)
+st.dataframe(kpis, width="stretch")
 st.line_chart(kpis.set_index("year_month")[["revenue", "orders", "customers"]])
 
 st.divider()
 
 st.subheader("🏆 Top 10 productos por revenue")
-st.dataframe(top, use_container_width=True)
+st.dataframe(top, width="stretch")
 st.bar_chart(top.set_index("product_name")[["revenue"]])
 
 st.divider()
@@ -88,5 +88,4 @@ if channel != "Todos":
 
 st.dataframe(
     f.sort_values("order_date", ascending=False).head(200),
-    use_container_width=True
-)
+    width="stretch")
